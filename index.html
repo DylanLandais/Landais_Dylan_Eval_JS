@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Un jeu de dés à deux joueurs, sur un seul écran." />
     <title>Jeu de dé</title>
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,9 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
     <link href="./styles.css" rel="stylesheet">
 </head>
-<body class="
-            w-screen h-screen 
-            items-center justify-center flex">
+<body class="w-screen h-screen items-center justify-center flex">
 
     <div class="h-full w-full p-4 grid grid-cols-2">
 
@@ -22,15 +21,12 @@
         ISTURN id="turnP1"
         CURRENT SCORE id="currentP1"------------------------------------->
         
-        <div class="h-full bg-gray-100
-                    grid justify-items-center">
+        <div class="h-full bg-gray-100 grid justify-items-center">
             
-            <div class="grid justify-items-center items-start
-                        h-40
-                        relative top-40">
+            <div class="grid justify-items-center items-start h-40 relative top-40">
 
-                <h2 class="text-5xl">PLAYER 1<span class="rounded-full bg-red-500 ml-6 mb-2 h-4 w-4 inline-block" id="turnP1"></span></h2>
-                <h1 class="text-8xl text-red-500 mt-6 font-light" id="scoreP1">0</h1>
+                <h2 class="md:text-5xl sm:text-4xl text-3xl">PLAYER 1<span class="rounded-full bg-red-500 ml-6 mb-2 h-4 w-4 inline-block" id="turnP1"></span></h2>
+                <h1 class="md:text-8xl sm:text-6xl text-5xl text-red-500 mt-6 font-light" id="scoreP1">--</h1>
             </div>
             
             <div class="container 
@@ -40,7 +36,7 @@
                         relative top-1/2">
 
                 <h6 class="text-xl">CURRENT</h6>
-                <h5 class="text-2xl text-white" id="currentP1">0</h5>
+                <h5 class="text-2xl text-white" id="currentP1">--</h5>
             </div>
 
         </div>
@@ -53,22 +49,16 @@
         <div class="h-full bg-white
                     grid justify-items-center">
             
-            <div class="grid justify-items-center items-start
-                        h-40
-                        relative top-40">
+            <div class="grid justify-items-center items-start h-40 relative top-40">
 
-                <h2 class="text-5xl">PLAYER 2<span class="rounded-full bg-red-500 ml-6 mb-2 h-4 w-4 inline-block" id="turnP2"></span></h2>
-                <h1 class="text-8xl text-red-500 mt-6 font-light" id="scoreP2">0</h1>
+                <h2 class="md:text-5xl sm:text-4xl text-3xl">PLAYER 2<span class="rounded-full bg-red-500 ml-6 mb-2 h-4 w-4 inline-block" id="turnP2"></span></h2>
+                <h1 class="md:text-8xl sm:text-6xl text-5xl text-red-500 mt-6 font-light" id="scoreP2">--</h1>
             </div>
             
-            <div class="container 
-                        grid justify-items-center
-                        bg-red-500
-                        h-20 w-40
-                        relative top-1/2">
+            <div class="container grid justify-items-center bg-red-500 h-20 w-40 relative top-1/2">
 
                 <h6 class="text-xl">CURRENT</h6>
-                <h5 class="text-2xl text-white" id="currentP2">0</h5>
+                <h5 class="text-2xl text-white" id="currentP2">--</h5>
             </div>
 
         </div>
@@ -78,14 +68,9 @@
     <!--BUTTONS------------------------------------------------------------------------------------------>
 
     <!--NEW GAME id="newgameBtn"-->
-    <button id="newgameBtn" class="absolute top-20
-                                   text-xl
-                                   grid grid-cols-2 gap-6
-                                   w-24 h-10 mr-10 -ml-10">
+    <button id="newgameBtn" class="absolute top-20 text-xl grid grid-cols-2 gap-6 w-24 h-10 mr-10 -ml-10">
 
-            <svg class="border border-red-500 rounded-full
-                        h-8 w-8 p-1 col-start-1 col-end-2
-                        flex justify-center items-center" id="Group_1" data-name="Group 1" xmlns="http://www.w3.org/2000/svg" width="1.4rem" height="1.4rem" viewBox="0 0 3000 3000" fill="red">
+            <svg class="border border-red-500 rounded-full h-8 w-8 p-1 col-start-1 col-end-2 flex justify-center items-center" id="Group_1" data-name="Group 1" xmlns="http://www.w3.org/2000/svg" width="1.4rem" height="1.4rem" viewBox="0 0 3000 3000" fill="red">
                 <rect id="Rectangle_1" data-name="Rectangle 1" width="150" height="3000" transform="translate(1425)"/>
                 <rect id="Rectangle_2" data-name="Rectangle 2" width="150" height="3000" transform="translate(3000 1425) rotate(90)"/>
             </svg>       
@@ -96,14 +81,8 @@
 
     <!--ROLL DICE id="rolldiceBtn"-->
 
-    <button id="rolldiceBtn" class="absolute top-3/4
-                                text-xl
-                                grid grid-cols-2 gap-6
-                                w-24 h-10 -ml-10 mt-2">
-
-        <svg class="col-start-1 col-end-2
-                    flex justify-center items-center
-                    ml-6 mb-1" 
+    <button id="rolldiceBtn" class="absolute top-3/4 text-xl grid grid-cols-2 gap-6 w-24 h-10 -ml-10 md:mt-2 mt-28">
+        <svg class="col-start-1 col-end-2 flex justify-center items-center ml-6 mb-1" 
         xmlns="http://www.w3.org/2000/svg" width="1.8rem" height="1.8rem" viewBox="0 0 2800 2800">
             <g id="Group_1" data-name="Group 1" transform="translate(-100 -100)">
               <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(100 100)" fill="#fff" stroke="red" stroke-width="150">
@@ -125,26 +104,19 @@
 
     <!--HOLD id="holdBtn"-->
 
-    <button id="holdBtn" class="absolute top-3/4
-                            text-xl
-                            grid grid-cols-2 gap-6
-                            w-24 h-10 -ml-3 mt-12">
+    <button id="holdBtn" class="absolute top-3/4 text-xl grid grid-cols-2 gap-6 w-24 h-10 -ml-3 sm:mt-12 mt-40">
 
         
 
-        <svg class="h-8 w-8 col-start-1 col-end-2
-                    flex justify-center items-center" 
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="1.4rem" height="1.4rem" 
-                    viewBox="0 0 3000 2999.5">
+        <svg class="h-8 w-8 col-start-1 col-end-2 flex justify-center items-center" xmlns="http://www.w3.org/2000/svg" width="1.4rem" height="1.4rem" viewBox="0 0 3000 2999.5">
             <g id="Group_1" data-name="Group 1" transform="translate(0 -0.5)">
-              <g id="Rectangle_1" data-name="Rectangle 1" transform="translate(0 762)" fill="none" stroke="red" stroke-width="200">
-                <rect width="3000" height="2238" stroke="none"/>
-                <rect x="100" y="100" width="2800" height="2038" fill="none"/>
-              </g>
-              <line id="Line_1" data-name="Line 1" y2="1881" transform="translate(1500.5 0.5)" fill="none" stroke="red" stroke-width="200"/>
-              <line id="Line_2" data-name="Line 2" y2="700" transform="translate(1941.987 1447.013) rotate(45)" fill="none" stroke="red" stroke-width="200"/>
-              <line id="Line_3" data-name="Line 3" y2="700" transform="translate(1097.013 1447.013) rotate(-45)" fill="none" stroke="red" stroke-width="200"/>
+                <g id="Rectangle_1" data-name="Rectangle 1" transform="translate(0 762)" fill="none" stroke="red" stroke-width="200">
+                    <rect width="3000" height="2238" stroke="none"/>
+                    <rect x="100" y="100" width="2800" height="2038" fill="none"/>
+                </g>
+                <line id="Line_1" data-name="Line 1" y2="1881" transform="translate(1500.5 0.5)" fill="none" stroke="red" stroke-width="200"/>
+                <line id="Line_2" data-name="Line 2" y2="700" transform="translate(1941.987 1447.013) rotate(45)" fill="none" stroke="red" stroke-width="200"/>
+                <line id="Line_3" data-name="Line 3" y2="700" transform="translate(1097.013 1447.013) rotate(-45)" fill="none" stroke="red" stroke-width="200"/>
             </g>
         </svg>
 
@@ -152,166 +124,145 @@
         
     </button>
 
-    <!--DICE--------------------------------------------------------------->
+    <!--DICES--------------------------------------------------------------->
 
-    <div id="dice1" class="bg-white 
-                           shadow-2xl p-20 mt-10
-                           absolute">
+    <div id="dice1" alt="Dé 1" class="bg-white shadow-2xl p-20 mt-10 absolute">
                
-       <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 600 600">
+        <svg xmlns="http://www.w3.org/2000/svg" width="3rem" height="3rem" viewBox="0 0 600 600">
         <g id="Ellipse_17" data-name="Ellipse 17" fill="#ef4444" stroke="#707070" stroke-width="1">
           <circle cx="300" cy="300" r="300" stroke="none"/>
           <circle cx="300" cy="300" r="299.5" fill="none"/>
         </g>
-      </svg>
-                          
-                          
-    </div>
-
-    <div id="dice2" class="bg-white 
-                           shadow-2xl p-4 mt-10
-                           absolute">
-               
-       <svg xmlns="http://www.w3.org/2000/svg" width="10rem" height="10rem" viewBox="0 0 2400 2250">
-        <g id="Group_5" data-name="Group 5" transform="translate(-395 -375)">
-          <g id="Ellipse_17" data-name="Ellipse 17" transform="translate(2195 375)" fill="#ef4444" stroke="#707070" stroke-width="1">
-            <circle cx="300" cy="300" r="300" stroke="none"/>
-            <circle cx="300" cy="300" r="299.5" fill="none"/>
-          </g>
-          <g id="Ellipse_18" data-name="Ellipse 18" transform="translate(395 2025)" fill="#ef4444" stroke="#707070" stroke-width="1">
-            <circle cx="300" cy="300" r="300" stroke="none"/>
-            <circle cx="300" cy="300" r="299.5" fill="none"/>
-          </g>
-        </g>
-      </svg>
-                          
-                          
+        </svg>                  
                           
     </div>
 
-    <div id="dice3" class="bg-white 
-                           shadow-2xl p-4 mt-10
-                           absolute">
+    <div id="dice2" class="bg-white shadow-2xl p-4 mt-10 absolute" Alt="Dé 2">
                
-         <svg xmlns="http://www.w3.org/2000/svg" width="10rem" height="10rem" viewBox="0 0 2400 2250">
-          <g id="Group_6" data-name="Group 6" transform="translate(-300 -375)">
-            <g id="Ellipse_11" data-name="Ellipse 11" transform="translate(1200 1225)" fill="#ef4444" stroke="#707070" stroke-width="1">
-              <circle cx="300" cy="300" r="300" stroke="none"/>
-              <circle cx="300" cy="300" r="299.5" fill="none"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="10rem" height="10rem" viewBox="0 0 2400 2250">
+            <g id="Group_5" data-name="Group 5" transform="translate(-395 -375)">
+            <g id="Ellipse_17" data-name="Ellipse 17" transform="translate(2195 375)" fill="#ef4444" stroke="#707070" stroke-width="1">
+                <circle cx="300" cy="300" r="300" stroke="none"/>
+                <circle cx="300" cy="300" r="299.5" fill="none"/>
             </g>
-            <g id="Ellipse_12" data-name="Ellipse 12" transform="translate(2100 375)" fill="#ef4444" stroke="#707070" stroke-width="1">
-              <circle cx="300" cy="300" r="300" stroke="none"/>
-              <circle cx="300" cy="300" r="299.5" fill="none"/>
+            <g id="Ellipse_18" data-name="Ellipse 18" transform="translate(395 2025)" fill="#ef4444" stroke="#707070" stroke-width="1">
+                <circle cx="300" cy="300" r="300" stroke="none"/>
+                <circle cx="300" cy="300" r="299.5" fill="none"/>
             </g>
-            <g id="Ellipse_15" data-name="Ellipse 15" transform="translate(300 2025)" fill="#ef4444" stroke="#707070" stroke-width="1">
-              <circle cx="300" cy="300" r="300" stroke="none"/>
-              <circle cx="300" cy="300" r="299.5" fill="none"/>
             </g>
-          </g>
         </svg>
-            
+                                                
+    </div>
+
+    <div id="dice3" class="bg-white shadow-2xl p-4 mt-10 absolute" alt="Dé 3">
+               
+        <svg xmlns="http://www.w3.org/2000/svg" width="10rem" height="10rem" viewBox="0 0 2400 2250">
+            <g id="Group_6" data-name="Group 6" transform="translate(-300 -375)">
+                <g id="Ellipse_11" data-name="Ellipse 11" transform="translate(1200 1225)" fill="#ef4444" stroke="#707070" stroke-width="1">
+                <circle cx="300" cy="300" r="300" stroke="none"/>
+                <circle cx="300" cy="300" r="299.5" fill="none"/>
+                </g>
+                <g id="Ellipse_12" data-name="Ellipse 12" transform="translate(2100 375)" fill="#ef4444" stroke="#707070" stroke-width="1">
+                <circle cx="300" cy="300" r="300" stroke="none"/>
+                <circle cx="300" cy="300" r="299.5" fill="none"/>
+                </g>
+                <g id="Ellipse_15" data-name="Ellipse 15" transform="translate(300 2025)" fill="#ef4444" stroke="#707070" stroke-width="1">
+                <circle cx="300" cy="300" r="300" stroke="none"/>
+                <circle cx="300" cy="300" r="299.5" fill="none"/>
+                </g>
+            </g>
+        </svg>       
                           
     </div>
 
-    <div id="dice4" class="bg-white 
-                           shadow-2xl p-4 mt-10
-                           absolute">
+    <div id="dice4" class="bg-white shadow-2xl p-4 mt-10 absolute" alt="Dé 4">
                
-       <svg xmlns="http://www.w3.org/2000/svg" width="10rem" height="10rem" viewBox="0 0 2400 2250">
-        <g id="Group_7" data-name="Group 7" transform="translate(-300 -375)">
-          <g id="Ellipse_7" data-name="Ellipse 7" transform="translate(2100 375)" fill="#ef4444" stroke="#707070" stroke-width="1">
-            <circle cx="300" cy="300" r="300" stroke="none"/>
-            <circle cx="300" cy="300" r="299.5" fill="none"/>
-          </g>
-          <g id="Ellipse_8" data-name="Ellipse 8" transform="translate(300 375)" fill="#ef4444" stroke="#707070" stroke-width="1">
-            <circle cx="300" cy="300" r="300" stroke="none"/>
-            <circle cx="300" cy="300" r="299.5" fill="none"/>
-          </g>
-          <g id="Ellipse_9" data-name="Ellipse 9" transform="translate(2100 2025)" fill="#ef4444" stroke="#707070" stroke-width="1">
-            <circle cx="300" cy="300" r="300" stroke="none"/>
-            <circle cx="300" cy="300" r="299.5" fill="none"/>
-          </g>
-          <g id="Ellipse_10" data-name="Ellipse 10" transform="translate(300 2025)" fill="#ef4444" stroke="#707070" stroke-width="1">
-            <circle cx="300" cy="300" r="300" stroke="none"/>
-            <circle cx="300" cy="300" r="299.5" fill="none"/>
-          </g>
-        </g>
-      </svg>
-                          
-            
-                          
+        <svg xmlns="http://www.w3.org/2000/svg" width="10rem" height="10rem" viewBox="0 0 2400 2250">
+            <g id="Group_7" data-name="Group 7" transform="translate(-300 -375)">
+            <g id="Ellipse_7" data-name="Ellipse 7" transform="translate(2100 375)" fill="#ef4444" stroke="#707070" stroke-width="1">
+                <circle cx="300" cy="300" r="300" stroke="none"/>
+                <circle cx="300" cy="300" r="299.5" fill="none"/>
+            </g>
+            <g id="Ellipse_8" data-name="Ellipse 8" transform="translate(300 375)" fill="#ef4444" stroke="#707070" stroke-width="1">
+                <circle cx="300" cy="300" r="300" stroke="none"/>
+                <circle cx="300" cy="300" r="299.5" fill="none"/>
+            </g>
+            <g id="Ellipse_9" data-name="Ellipse 9" transform="translate(2100 2025)" fill="#ef4444" stroke="#707070" stroke-width="1">
+                <circle cx="300" cy="300" r="300" stroke="none"/>
+                <circle cx="300" cy="300" r="299.5" fill="none"/>
+            </g>
+            <g id="Ellipse_10" data-name="Ellipse 10" transform="translate(300 2025)" fill="#ef4444" stroke="#707070" stroke-width="1">
+                <circle cx="300" cy="300" r="300" stroke="none"/>
+                <circle cx="300" cy="300" r="299.5" fill="none"/>
+            </g>
+            </g>
+        </svg>
+                                         
     </div>
 
-    <div id="dice5" class="bg-white 
-                           shadow-2xl p-4 mt-10
-                           absolute">
+    <div id="dice5" class="bg-white shadow-2xl p-4 mt-10 absolute" alt="Dé 5">
                
-       <svg xmlns="http://www.w3.org/2000/svg" width="10rem" height="10rem" viewBox="0 0 2400 2250">
-        <g id="Group_4" data-name="Group 4" transform="translate(-300 -350)">
-          <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(1200 1200)" fill="#ef4444" stroke="#707070" stroke-width="1">
-            <circle cx="300" cy="300" r="300" stroke="none"/>
-            <circle cx="300" cy="300" r="299.5" fill="none"/>
-          </g>
-          <g id="Ellipse_1-2" data-name="Ellipse 1" transform="translate(2100 350)" fill="#ef4444" stroke="#707070" stroke-width="1">
-            <circle cx="300" cy="300" r="300" stroke="none"/>
-            <circle cx="300" cy="300" r="299.5" fill="none"/>
-          </g>
-          <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(300 350)" fill="#ef4444" stroke="#707070" stroke-width="1">
-            <circle cx="300" cy="300" r="300" stroke="none"/>
-            <circle cx="300" cy="300" r="299.5" fill="none"/>
-          </g>
-          <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(2100 2000)" fill="#ef4444" stroke="#707070" stroke-width="1">
-            <circle cx="300" cy="300" r="300" stroke="none"/>
-            <circle cx="300" cy="300" r="299.5" fill="none"/>
-          </g>
-          <g id="Ellipse_5" data-name="Ellipse 5" transform="translate(300 2000)" fill="#ef4444" stroke="#707070" stroke-width="1">
-            <circle cx="300" cy="300" r="300" stroke="none"/>
-            <circle cx="300" cy="300" r="299.5" fill="none"/>
-          </g>
-        </g>
-      </svg>
-                          
-                          
-            
-                          
-    </div>
-
-    <div id="dice6" class="bg-white 
-                           shadow-2xl mt-10 p-4
-                           absolute">
-               
-       <svg xmlns="http://www.w3.org/2000/svg" width="10rem" height="10rem" viewBox="0 0 2400 2250">
-        <g id="Group_3" data-name="Group 3" transform="translate(-300 -350)">
-          <g id="Group_1" data-name="Group 1">
-            <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(1200 350)" fill="#ef4444" stroke="#707070" stroke-width="1">
-              <circle cx="300" cy="300" r="300" stroke="none"/>
-              <circle cx="300" cy="300" r="299.5" fill="none"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="10rem" height="10rem" viewBox="0 0 2400 2250">
+            <g id="Group_4" data-name="Group 4" transform="translate(-300 -350)">
+            <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(1200 1200)" fill="#ef4444" stroke="#707070" stroke-width="1">
+                <circle cx="300" cy="300" r="300" stroke="none"/>
+                <circle cx="300" cy="300" r="299.5" fill="none"/>
             </g>
             <g id="Ellipse_1-2" data-name="Ellipse 1" transform="translate(2100 350)" fill="#ef4444" stroke="#707070" stroke-width="1">
-              <circle cx="300" cy="300" r="300" stroke="none"/>
-              <circle cx="300" cy="300" r="299.5" fill="none"/>
+                <circle cx="300" cy="300" r="300" stroke="none"/>
+                <circle cx="300" cy="300" r="299.5" fill="none"/>
             </g>
             <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(300 350)" fill="#ef4444" stroke="#707070" stroke-width="1">
-              <circle cx="300" cy="300" r="300" stroke="none"/>
-              <circle cx="300" cy="300" r="299.5" fill="none"/>
+                <circle cx="300" cy="300" r="300" stroke="none"/>
+                <circle cx="300" cy="300" r="299.5" fill="none"/>
             </g>
-          </g>
-          <g id="Group_2" data-name="Group 2" transform="translate(0 1650)">
-            <g id="Ellipse_1-3" data-name="Ellipse 1" transform="translate(1200 350)" fill="#ef4444" stroke="#707070" stroke-width="1">
-              <circle cx="300" cy="300" r="300" stroke="none"/>
-              <circle cx="300" cy="300" r="299.5" fill="none"/>
+            <g id="Ellipse_4" data-name="Ellipse 4" transform="translate(2100 2000)" fill="#ef4444" stroke="#707070" stroke-width="1">
+                <circle cx="300" cy="300" r="300" stroke="none"/>
+                <circle cx="300" cy="300" r="299.5" fill="none"/>
             </g>
-            <g id="Ellipse_1-4" data-name="Ellipse 1" transform="translate(2100 350)" fill="#ef4444" stroke="#707070" stroke-width="1">
-              <circle cx="300" cy="300" r="300" stroke="none"/>
-              <circle cx="300" cy="300" r="299.5" fill="none"/>
+            <g id="Ellipse_5" data-name="Ellipse 5" transform="translate(300 2000)" fill="#ef4444" stroke="#707070" stroke-width="1">
+                <circle cx="300" cy="300" r="300" stroke="none"/>
+                <circle cx="300" cy="300" r="299.5" fill="none"/>
             </g>
-            <g id="Ellipse_2-2" data-name="Ellipse 2" transform="translate(300 350)" fill="#ef4444" stroke="#707070" stroke-width="1">
-              <circle cx="300" cy="300" r="300" stroke="none"/>
-              <circle cx="300" cy="300" r="299.5" fill="none"/>
             </g>
-          </g>
-        </g>
-      </svg>
+        </svg>
+
+    </div>
+
+    <div id="dice6" class="bg-white shadow-2xl mt-10 p-4 absolute" alt="Dé 6">
+               
+        <svg xmlns="http://www.w3.org/2000/svg" width="10rem" height="10rem" viewBox="0 0 2400 2250">
+            <g id="Group_3" data-name="Group 3" transform="translate(-300 -350)">
+            <g id="Group_1" data-name="Group 1">
+                <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(1200 350)" fill="#ef4444" stroke="#707070" stroke-width="1">
+                <circle cx="300" cy="300" r="300" stroke="none"/>
+                <circle cx="300" cy="300" r="299.5" fill="none"/>
+                </g>
+                <g id="Ellipse_1-2" data-name="Ellipse 1" transform="translate(2100 350)" fill="#ef4444" stroke="#707070" stroke-width="1">
+                <circle cx="300" cy="300" r="300" stroke="none"/>
+                <circle cx="300" cy="300" r="299.5" fill="none"/>
+                </g>
+                <g id="Ellipse_2" data-name="Ellipse 2" transform="translate(300 350)" fill="#ef4444" stroke="#707070" stroke-width="1">
+                <circle cx="300" cy="300" r="300" stroke="none"/>
+                <circle cx="300" cy="300" r="299.5" fill="none"/>
+                </g>
+            </g>
+            <g id="Group_2" data-name="Group 2" transform="translate(0 1650)">
+                <g id="Ellipse_1-3" data-name="Ellipse 1" transform="translate(1200 350)" fill="#ef4444" stroke="#707070" stroke-width="1">
+                <circle cx="300" cy="300" r="300" stroke="none"/>
+                <circle cx="300" cy="300" r="299.5" fill="none"/>
+                </g>
+                <g id="Ellipse_1-4" data-name="Ellipse 1" transform="translate(2100 350)" fill="#ef4444" stroke="#707070" stroke-width="1">
+                <circle cx="300" cy="300" r="300" stroke="none"/>
+                <circle cx="300" cy="300" r="299.5" fill="none"/>
+                </g>
+                <g id="Ellipse_2-2" data-name="Ellipse 2" transform="translate(300 350)" fill="#ef4444" stroke="#707070" stroke-width="1">
+                <circle cx="300" cy="300" r="300" stroke="none"/>
+                <circle cx="300" cy="300" r="299.5" fill="none"/>
+                </g>
+            </g>
+            </g>
+        </svg>
                           
     </div>
 
